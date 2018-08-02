@@ -11,12 +11,13 @@ import RxSwift
 import RxAlamofire
 
 open class MRKRequestBase {
-    internal(set) var path: String!
-    internal(set) var method: HTTPMethod!
-    internal(set) var parameters: [String: Any]?
-    internal(set) var encoding: ParameterEncoding! = URLEncoding.default
-    internal(set) var headers: HTTPHeaders?
+    public var path: String!
+    public var parameters: [String: Any]?
+    public var headers: HTTPHeaders?
     
+    var encoding: ParameterEncoding! = URLEncoding.default
+    var method: HTTPMethod!
+
     //MARK : - Public
     
     public func rxRequest()->Observable<DataRequest>{
