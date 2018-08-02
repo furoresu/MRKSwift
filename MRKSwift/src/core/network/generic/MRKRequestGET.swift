@@ -9,7 +9,7 @@
 import Foundation
 
 open class MRKRequestGET : MRKRequestBase {
-    override init() {
+    public override init() {
         super.init()
         method = .get
     }
