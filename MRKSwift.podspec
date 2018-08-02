@@ -34,5 +34,7 @@ s.source_files  = "MRKSwift/**/*.swift"
 s.dependency 'RxSwift' , '4.2.0'
 s.dependency 'RxCocoa' , '4.2.0'
 s.dependency 'ObjectMapper' , '3.3.0'
+s.dependency 'Alamofire' , '4.7.3'
+s.dependency 'RxAlamofire' , '4.2.0'
 
 end
