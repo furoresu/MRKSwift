@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class MRKRequestPOST : MRKRequestBase {
+open class MRKRequestPOST : MRKRequestBase {
     override init() {
         super.init()
         method = .post

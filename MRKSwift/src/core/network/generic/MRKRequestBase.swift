@@ -10,7 +10,7 @@ import Alamofire
 import RxSwift
 import RxAlamofire
 
-public class MRKRequestBase {
+open class MRKRequestBase {
     internal(set) var path: String!
     internal(set) var method: HTTPMethod!
     internal(set) var parameters: [String: Any]?

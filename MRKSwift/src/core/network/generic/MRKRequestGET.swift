@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class MRKRequestGET : MRKRequestBase {
+open class MRKRequestGET : MRKRequestBase {
     override init() {
         super.init()
         method = .get
