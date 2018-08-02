@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06486CD22113C260008BAAAD /* MRKRequestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06486CD12113C260008BAAAD /* MRKRequestBase.swift */; };
+		06486CD42113C30F008BAAAD /* MRKRequestPOST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06486CD32113C30F008BAAAD /* MRKRequestPOST.swift */; };
+		06486CD62113C620008BAAAD /* MRKRequestGET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06486CD52113C620008BAAAD /* MRKRequestGET.swift */; };
+		06486CD92113C67D008BAAAD /* Rx+Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06486CD82113C67D008BAAAD /* Rx+Mappable.swift */; };
+		06486CDB2113C774008BAAAD /* Rx+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06486CDA2113C774008BAAAD /* Rx+UIViewController.swift */; };
 		227BC32A64114F39EB77DC8F /* Pods_MRKSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45923BCBDA3DDA8F61BAD741 /* Pods_MRKSwift.framework */; };
 		429A8C9820FC08DD003F1E53 /* MRKSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 429A8C9620FC08DD003F1E53 /* MRKSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		429A8CC020FC094F003F1E53 /* UIView+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429A8CB720FC094F003F1E53 /* UIView+className.swift */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06486CD12113C260008BAAAD /* MRKRequestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRKRequestBase.swift; sourceTree = "<group>"; };
+		06486CD32113C30F008BAAAD /* MRKRequestPOST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRKRequestPOST.swift; sourceTree = "<group>"; };
+		06486CD52113C620008BAAAD /* MRKRequestGET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRKRequestGET.swift; sourceTree = "<group>"; };
+		06486CD82113C67D008BAAAD /* Rx+Mappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Mappable.swift"; sourceTree = "<group>"; };
+		06486CDA2113C774008BAAAD /* Rx+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+UIViewController.swift"; sourceTree = "<group>"; };
 		429A8C9320FC08DD003F1E53 /* MRKSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRKSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		429A8C9620FC08DD003F1E53 /* MRKSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRKSwift.h; sourceTree = "<group>"; };
 		429A8C9720FC08DD003F1E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +50,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06486CCF2113C23F008BAAAD /* network */ = {
+			isa = PBXGroup;
+			children = (
+				06486CD02113C23F008BAAAD /* generic */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		06486CD02113C23F008BAAAD /* generic */ = {
+			isa = PBXGroup;
+			children = (
+				06486CD12113C260008BAAAD /* MRKRequestBase.swift */,
+				06486CD32113C30F008BAAAD /* MRKRequestPOST.swift */,
+				06486CD52113C620008BAAAD /* MRKRequestGET.swift */,
+			);
+			path = generic;
+			sourceTree = "<group>";
+		};
+		06486CD72113C66D008BAAAD /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				06486CD82113C67D008BAAAD /* Rx+Mappable.swift */,
+				06486CDA2113C774008BAAAD /* Rx+UIViewController.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
 		429A8C8920FC08DD003F1E53 = {
 			isa = PBXGroup;
 			children = (
@@ -112,8 +149,8 @@
 		429A8CB420FC094F003F1E53 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				06486CCF2113C23F008BAAAD /* network */,
 				429A8CB520FC094F003F1E53 /* extension */,
-				429A8CBD20FC094F003F1E53 /* network */,
 				429A8CBE20FC094F003F1E53 /* utils */,
 			);
 			path = core;
@@ -122,6 +159,7 @@
 		429A8CB520FC094F003F1E53 /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				06486CD72113C66D008BAAAD /* Rx */,
 				429A8CB620FC094F003F1E53 /* UIView */,
 				429A8CB920FC094F003F1E53 /* UICollectionView */,
 				429A8CBB20FC094F003F1E53 /* UITableView */,
@@ -152,13 +190,6 @@
 				429A8CBC20FC094F003F1E53 /* UITableView+register.swift */,
 			);
 			path = UITableView;
-			sourceTree = "<group>";
-		};
-		429A8CBD20FC094F003F1E53 /* network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = network;
 			sourceTree = "<group>";
 		};
 		429A8CBE20FC094F003F1E53 /* utils */ = {
@@ -292,6 +323,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06486CD62113C620008BAAAD /* MRKRequestGET.swift in Sources */,
+				06486CD42113C30F008BAAAD /* MRKRequestPOST.swift in Sources */,
+				06486CD22113C260008BAAAD /* MRKRequestBase.swift in Sources */,
+				06486CD92113C67D008BAAAD /* Rx+Mappable.swift in Sources */,
+				06486CDB2113C774008BAAAD /* Rx+UIViewController.swift in Sources */,
 				429A8CC220FC094F003F1E53 /* UICollectionView+register.swift in Sources */,
 				429A8CC120FC094F003F1E53 /* UIView+nib.swift in Sources */,
 				429A8CC320FC094F003F1E53 /* UITableView+register.swift in Sources */,
