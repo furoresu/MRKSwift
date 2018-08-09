@@ -28,7 +28,7 @@ s.source       = { :git => "https://github.com/furoresu/MRKSwift.git", :tag => "
 
 
 # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-s.source_files  = "MRKSwift/**/*.swift"
+s.source_files  = "MRKSwift/src/ui/**/*.swift", "MRKSwift/src/core/**/*.swift", "MRKSwift/res/**/*.swift"
 
 # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 s.dependency 'RxSwift' , '4.2.0'

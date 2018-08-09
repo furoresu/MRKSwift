@@ -12,6 +12,11 @@
 		06486CD62113C620008BAAAD /* MRKRequestGET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06486CD52113C620008BAAAD /* MRKRequestGET.swift */; };
 		06486CD92113C67D008BAAAD /* Rx+Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06486CD82113C67D008BAAAD /* Rx+Mappable.swift */; };
 		06486CDB2113C774008BAAAD /* Rx+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06486CDA2113C774008BAAAD /* Rx+UIViewController.swift */; };
+		06D8744E211CBD6800FE0610 /* MRKGenericViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D8744D211CBD6800FE0610 /* MRKGenericViewControllerViewModel.swift */; };
+		06D87450211CCC5800FE0610 /* MRKGenericNavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D8744F211CCC5800FE0610 /* MRKGenericNavigationViewModel.swift */; };
+		06D87455211CCE6200FE0610 /* MRKTransitionRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D87454211CCE6200FE0610 /* MRKTransitionRule.swift */; };
+		06D87459211CD09700FE0610 /* MRKGenericViewTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D87458211CD09700FE0610 /* MRKGenericViewTransition.swift */; };
+		06D8745B211CD1F600FE0610 /* MRKFlipViewTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D8745A211CD1F600FE0610 /* MRKFlipViewTransition.swift */; };
 		227BC32A64114F39EB77DC8F /* Pods_MRKSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45923BCBDA3DDA8F61BAD741 /* Pods_MRKSwift.framework */; };
 		429A8C9820FC08DD003F1E53 /* MRKSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 429A8C9620FC08DD003F1E53 /* MRKSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		429A8CC020FC094F003F1E53 /* UIView+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429A8CB720FC094F003F1E53 /* UIView+className.swift */; };
@@ -26,6 +31,11 @@
 		06486CD52113C620008BAAAD /* MRKRequestGET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRKRequestGET.swift; sourceTree = "<group>"; };
 		06486CD82113C67D008BAAAD /* Rx+Mappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+Mappable.swift"; sourceTree = "<group>"; };
 		06486CDA2113C774008BAAAD /* Rx+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rx+UIViewController.swift"; sourceTree = "<group>"; };
+		06D8744D211CBD6800FE0610 /* MRKGenericViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRKGenericViewControllerViewModel.swift; sourceTree = "<group>"; };
+		06D8744F211CCC5800FE0610 /* MRKGenericNavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRKGenericNavigationViewModel.swift; sourceTree = "<group>"; };
+		06D87454211CCE6200FE0610 /* MRKTransitionRule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRKTransitionRule.swift; sourceTree = "<group>"; };
+		06D87458211CD09700FE0610 /* MRKGenericViewTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRKGenericViewTransition.swift; sourceTree = "<group>"; };
+		06D8745A211CD1F600FE0610 /* MRKFlipViewTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRKFlipViewTransition.swift; sourceTree = "<group>"; };
 		429A8C9320FC08DD003F1E53 /* MRKSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MRKSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		429A8C9620FC08DD003F1E53 /* MRKSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MRKSwift.h; sourceTree = "<group>"; };
 		429A8C9720FC08DD003F1E53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +87,48 @@
 			path = Rx;
 			sourceTree = "<group>";
 		};
+		06D8744B211CBD0300FE0610 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				06D8744C211CBD0300FE0610 /* viewModel */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		06D8744C211CBD0300FE0610 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				06D8744D211CBD6800FE0610 /* MRKGenericViewControllerViewModel.swift */,
+				06D8744F211CCC5800FE0610 /* MRKGenericNavigationViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		06D87453211CCE6200FE0610 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				06D87454211CCE6200FE0610 /* MRKTransitionRule.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		06D87456211CD04D00FE0610 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				06D87457211CD04D00FE0610 /* transitions */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		06D87457211CD04D00FE0610 /* transitions */ = {
+			isa = PBXGroup;
+			children = (
+				06D87458211CD09700FE0610 /* MRKGenericViewTransition.swift */,
+				06D8745A211CD1F600FE0610 /* MRKFlipViewTransition.swift */,
+			);
+			path = transitions;
+			sourceTree = "<group>";
+		};
 		429A8C8920FC08DD003F1E53 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +150,7 @@
 		429A8C9520FC08DD003F1E53 /* MRKSwift */ = {
 			isa = PBXGroup;
 			children = (
+				06D87456211CD04D00FE0610 /* res */,
 				429A8CAF20FC094F003F1E53 /* src */,
 				429A8C9620FC08DD003F1E53 /* MRKSwift.h */,
 				429A8C9720FC08DD003F1E53 /* Info.plist */,
@@ -108,50 +161,19 @@
 		429A8CAF20FC094F003F1E53 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				429A8CB020FC094F003F1E53 /* ui */,
+				06D8744B211CBD0300FE0610 /* ui */,
 				429A8CB420FC094F003F1E53 /* core */,
 				429A8CBF20FC094F003F1E53 /* main */,
 			);
 			path = src;
 			sourceTree = "<group>";
 		};
-		429A8CB020FC094F003F1E53 /* ui */ = {
-			isa = PBXGroup;
-			children = (
-				429A8CB120FC094F003F1E53 /* viewModel */,
-				429A8CB220FC094F003F1E53 /* viewControllers */,
-				429A8CB320FC094F003F1E53 /* views */,
-			);
-			path = ui;
-			sourceTree = "<group>";
-		};
-		429A8CB120FC094F003F1E53 /* viewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = viewModel;
-			sourceTree = "<group>";
-		};
-		429A8CB220FC094F003F1E53 /* viewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = viewControllers;
-			sourceTree = "<group>";
-		};
-		429A8CB320FC094F003F1E53 /* views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = views;
-			sourceTree = "<group>";
-		};
 		429A8CB420FC094F003F1E53 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				06D87453211CCE6200FE0610 /* utils */,
 				06486CCF2113C23F008BAAAD /* network */,
 				429A8CB520FC094F003F1E53 /* extension */,
-				429A8CBE20FC094F003F1E53 /* utils */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -190,13 +212,6 @@
 				429A8CBC20FC094F003F1E53 /* UITableView+register.swift */,
 			);
 			path = UITableView;
-			sourceTree = "<group>";
-		};
-		429A8CBE20FC094F003F1E53 /* utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = utils;
 			sourceTree = "<group>";
 		};
 		429A8CBF20FC094F003F1E53 /* main */ = {
@@ -324,14 +339,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				06486CD62113C620008BAAAD /* MRKRequestGET.swift in Sources */,
+				06D8744E211CBD6800FE0610 /* MRKGenericViewControllerViewModel.swift in Sources */,
+				06D87450211CCC5800FE0610 /* MRKGenericNavigationViewModel.swift in Sources */,
+				06D87455211CCE6200FE0610 /* MRKTransitionRule.swift in Sources */,
 				06486CD42113C30F008BAAAD /* MRKRequestPOST.swift in Sources */,
 				06486CD22113C260008BAAAD /* MRKRequestBase.swift in Sources */,
+				06D87459211CD09700FE0610 /* MRKGenericViewTransition.swift in Sources */,
 				06486CD92113C67D008BAAAD /* Rx+Mappable.swift in Sources */,
 				06486CDB2113C774008BAAAD /* Rx+UIViewController.swift in Sources */,
 				429A8CC220FC094F003F1E53 /* UICollectionView+register.swift in Sources */,
 				429A8CC120FC094F003F1E53 /* UIView+nib.swift in Sources */,
 				429A8CC320FC094F003F1E53 /* UITableView+register.swift in Sources */,
 				429A8CC020FC094F003F1E53 /* UIView+className.swift in Sources */,
+				06D8745B211CD1F600FE0610 /* MRKFlipViewTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
