@@ -13,18 +13,21 @@ open class MRKGenericViewControllerViewModel<T>: NSObject where T:UIViewControll
     
     public var vc: T? {
         didSet{
-            _ = vc?.rx.viewDidLoad.bind{ _ in self.bindView() }
-            _ = vc?.rx.viewWillAppear.bind{ _ in self.viewWillAppear() }
+            guard let vc = self.vc else {
+                return
+            }
+            _ = vc.rx.viewDidLoad.bind{ _ in self.bindView(viewController: vc) }
+            _ = vc.rx.viewWillAppear.bind{ _ in self.viewWillAppear(viewController: vc) }
         }
     }
     
     //MARK : - Override
     
-    public func bindView(){
+    public func bindView( viewController vc:T ){
         //TODO
     }
     
-    public func viewWillAppear(){
+    public func viewWillAppear( viewController vc:T  ){
         //TODO
     }
     

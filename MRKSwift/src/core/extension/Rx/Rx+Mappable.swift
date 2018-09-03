@@ -15,7 +15,7 @@ import ObjectMapper
 fileprivate let mappingError = NSError(
     domain: "MAPPING ERROR",
     code: -1,
-    userInfo: [NSLocalizedDescriptionKey: "ObjectMapper can't mapping"]
+    userInfo: [NSLocalizedDescriptionKey: "Object can't be mapped"]
 )
 
 extension ObservableType {
