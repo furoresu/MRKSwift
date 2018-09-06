@@ -28,5 +28,11 @@ open class MRKRequestBase {
             encoding: encoding,
             headers: headers)
     }
+    
+    public func rxResponse()->Observable<(HTTPURLResponse, Data)> {
+        return rxRequest().flatMap{
+            $0.rx.responseData()
+        }
+    }
 }
 
