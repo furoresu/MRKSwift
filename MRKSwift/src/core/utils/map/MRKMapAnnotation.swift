@@ -7,11 +7,11 @@
 
 import MapKit
 
-class MRKMapAnnotation : NSObject , MKAnnotation {
-    var coordinate: CLLocationCoordinate2D
-    
-    
-    
-    
-    
-}
+//class MRKMapAnnotation : NSObject , MKAnnotation {
+//    var coordinate: CLLocationCoordinate2D
+//    
+//    
+//    
+//    
+//    
+//}
