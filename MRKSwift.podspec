@@ -26,8 +26,6 @@ Pod::Spec.new do |s|
 	s.source       = { :git => "https://github.com/furoresu/MRKSwift.git", :tag => "0.0.1" }
 
 	# ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-	s.dependency 'RxSwift' , '4.2.0'
-	s.dependency 'RxCocoa' , '4.2.0'
 	s.dependency 'ObjectMapper' , '3.3.0'
 	s.dependency 'Alamofire' , '4.7.3'
 	s.dependency 'RxAlamofire' , '4.2.0'
@@ -36,6 +34,8 @@ Pod::Spec.new do |s|
 	# ――― Sub specs ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
 	s.subspec 'MVVM' do |mvvm|
+		mvvm.dependency 'RxSwift' , '4.2.0'
+		mvvm.dependency 'RxCocoa' , '4.2.0'
 		mvvm.source_files  = 	"MRKSwift/src/ui/viewModel/MRKGenericViewControllerViewModel.swift",
 								"MRKSwift/src/core/extension/Rx/Rx+UIViewController.swift"
 	end
@@ -58,6 +58,7 @@ Pod::Spec.new do |s|
 		map.dependency "MRKSwift/Representers"
 		map.source_files  = "MRKSwift/src/ui/viewModel/MRKGenericMapViewModel.swift",
 							"MRKSwift/src/ui/representer/MRKMapRepresenter.swift",
-							"MRKSwift/src/ui/representer/MRKMapClusterRepresenter.swift"
+							"MRKSwift/src/ui/representer/MRKMapClusterRepresenter.swift",
+							"MRKSwift/src/core/utils/map/*.swift"
 	end
 end
