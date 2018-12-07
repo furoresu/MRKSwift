@@ -25,10 +25,6 @@ Pod::Spec.new do |s|
 	# ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 	s.source       = { :git => "https://github.com/furoresu/MRKSwift.git", :tag => "0.0.1" }
 
-
-	# ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-	s.source_files  = "MRKSwift/src/ui/**/*.swift", "MRKSwift/src/core/**/*.swift", "MRKSwift/res/**/*.swift"
-
 	# ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 	s.dependency 'RxSwift' , '4.2.0'
 	s.dependency 'RxCocoa' , '4.2.0'
@@ -47,6 +43,21 @@ Pod::Spec.new do |s|
 	s.subspec 'Navigation' do |nav|
 		nav.dependency "MRKSwift/MVVM"
 		nav.source_files  = "MRKSwift/src/ui/viewModel/MRKGenericNavigationViewModel.swift",
-							"MRKSwift/src/core/utils/MRKTransitionRule.swift"
+							"MRKSwift/src/core/utils/transition/MRKTransitionRule.swift",
+							"MRKSwift/res/transitions/*.swift"
+	end
+
+	s.subspec 'Representers' do |rep|
+		rep.source_files  =	"MRKSwift/src/core/extension/UICollectionView/*.swift",
+							"MRKSwift/src/core/extension/UITableView/*.swift",
+							"MRKSwift/src/core/extension/UIView/*.swift"
+	end
+
+	s.subspec 'MapUtils' do |map|
+		map.dependency "MRKSwift/MVVM"
+		map.dependency "MRKSwift/Representers"
+		map.source_files  = "MRKSwift/src/ui/viewModel/MRKGenericMapViewModel.swift",
+							"MRKSwift/src/ui/representer/MRKMapRepresenter.swift",
+							"MRKSwift/src/ui/representer/MRKMapClusterRepresenter.swift"
 	end
 end
