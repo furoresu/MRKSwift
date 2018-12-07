@@ -13,11 +13,9 @@ open class MRKGenericViewControllerViewModel<T>: NSObject where T:UIViewControll
     
     public var vc: T? {
         didSet{
-            guard let vc = self.vc else {
-                return
-            }
-            _ = vc.rx.viewDidLoad.bind{ _ in self.bindView(viewController: vc) }
-            _ = vc.rx.viewWillAppear.bind{ _ in self.viewWillAppear(viewController: vc) }
+            guard let vc = self.vc else { return }
+            _ = vc.rx.viewDidLoad.bind{ [weak self] _ in self?.bindView(viewController: vc) }
+            _ = vc.rx.viewWillAppear.bind{ [weak self] _ in self?.viewWillAppear(viewController: vc) }
         }
     }
     
