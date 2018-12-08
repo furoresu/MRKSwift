@@ -48,8 +48,12 @@ Pod::Spec.new do |s|
 	end
 
 	s.subspec 'Representers' do |rep|
-		rep.source_files  =	"MRKSwift/src/core/extension/UICollectionView/*.swift",
-							"MRKSwift/src/core/extension/UITableView/*.swift",
+		rep.source_files  =	"MRKSwift/src/core/extension/UITableView/*.swift",
+							"MRKSwift/src/core/extension/UICollectionView/*.swift",
+							"MRKSwift/src/ui/datasource/*.swift",
+							"MRKSwift/src/ui/representer/MRKCVRepresenter.swift",
+							"MRKSwift/src/ui/representer/MRKTVRepresenter.swift",
+							"MRKSwift/src/ui/datasource/*.swift",
 							"MRKSwift/src/core/extension/UIView/*.swift"
 	end
 
