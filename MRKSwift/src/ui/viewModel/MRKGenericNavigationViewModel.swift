@@ -10,13 +10,13 @@ import UIKit
 
 open class MRKGenericNavigationViewModel:MRKGenericViewControllerViewModel<UINavigationController> , UINavigationControllerDelegate{
     
-    override public func viewWillAppear(viewController vc: UINavigationController) {
-        super.viewWillAppear(viewController: vc)
-        self.bindView(viewController: vc)
+    override open func viewWillAppear( _ vc: UINavigationController) {
+        super.viewWillAppear(vc)
+        self.viewDidLoad(vc)
     }
     
-    public override func bindView(viewController vc: UINavigationController) {
-        super.bindView(viewController: vc)
+    override open func viewDidLoad(_ vc: UINavigationController) {
+        super.viewDidLoad(vc)
         vc.delegate = self
     }
     
