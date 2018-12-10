@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 	s.version      = "0.0.1"
 	s.summary      = "This framework is a useful way of developing MVVM apps with the help of RXclear"
 	s.description  = "Some useful tools for MVVM development"
-	s.homepage     = "https://github.com/furoresu/MRKSwift"
+	s.homepage     = "https://github.com/mrktrace/MRKSwift"
 	# s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 	s.swift_version = "3.2"
 
 	# ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-	s.source       = { :git => "https://github.com/furoresu/MRKSwift.git", :tag => "0.0.1" }
+	s.source       = { :git => "https://github.com/mrktrace/MRKSwift.git", :tag => "0.0.1" }
 
 	# ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 	s.dependency 'ObjectMapper' , '3.3.0'
