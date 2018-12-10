@@ -27,8 +27,6 @@ Pod::Spec.new do |s|
 
 	# ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 	s.dependency 'ObjectMapper' , '3.3.0'
-	s.dependency 'Alamofire' , '4.7.3'
-	s.dependency 'RxAlamofire' , '4.2.0'
 
 
 	# ――― Sub specs ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -37,6 +35,14 @@ Pod::Spec.new do |s|
 		mvvm.dependency 'RxSwift' , '4.2.0'
 		mvvm.dependency 'RxCocoa' , '4.2.0'
 		mvvm.source_files  = 	"MRKSwift/src/ui/viewModel/MRKGenericViewControllerViewModel.swift",
+								"MRKSwift/src/core/network/**/*.swift"
+	end
+
+	s.subspec 'Network' do |net|
+		net.dependency 'RxSwift' , '4.2.0'
+		net.dependency 'Alamofire' , '4.7.3'
+		net.dependency 'RxAlamofire' , '4.2.0'
+		net.source_files  = 	"MRKSwift/src/ui/viewModel/MRKGenericViewControllerViewModel.swift",
 								"MRKSwift/src/core/extension/Rx/Rx+UIViewController.swift"
 	end
 
@@ -57,12 +63,12 @@ Pod::Spec.new do |s|
 							"MRKSwift/src/core/extension/UIView/*.swift"
 	end
 
-	s.subspec 'MapUtils' do |map|
-		map.dependency "MRKSwift/MVVM"
-		map.dependency "MRKSwift/Representers"
-		map.source_files  = "MRKSwift/src/ui/viewModel/MRKGenericMapViewModel.swift",
-							"MRKSwift/src/ui/representer/MRKMapRepresenter.swift",
-							"MRKSwift/src/ui/representer/MRKMapClusterRepresenter.swift",
-							"MRKSwift/src/core/utils/map/*.swift"
-	end
+	# s.subspec 'MapUtils' do |map|
+	# 	map.dependency "MRKSwift/MVVM"
+	# 	map.dependency "MRKSwift/Representers"
+	# 	map.source_files  = "MRKSwift/src/ui/viewModel/MRKGenericMapViewModel.swift",
+	# 						"MRKSwift/src/ui/representer/MRKMapRepresenter.swift",
+	# 						"MRKSwift/src/ui/representer/MRKMapClusterRepresenter.swift",
+	# 						"MRKSwift/src/core/utils/map/*.swift"
+	# end
 end

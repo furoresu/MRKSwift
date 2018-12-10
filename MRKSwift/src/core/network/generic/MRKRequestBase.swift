@@ -14,13 +14,20 @@ open class MRKRequestBase {
     public var path: String!
     public var parameters: [String: Any]?
     public var headers: HTTPHeaders?
-    
-    var encoding: ParameterEncoding! = URLEncoding.default
-    var method: HTTPMethod!
+    public var method: HTTPMethod!
+    public var encoding: ParameterEncoding!
 
     //MARK : - Public
     
-    public func rxRequest()->Observable<DataRequest>{
+    public init( _ path : String , method : HTTPMethod, params : [String:Any] = [:], headers: HTTPHeaders = [:], encoding: ParameterEncoding! = URLEncoding.default  ){
+        self.path = path
+        self.method = method
+        self.parameters = params
+        self.headers = headers
+        self.encoding = encoding
+    }
+    
+    open func rxRequest()->Observable<DataRequest>{
         return RxAlamofire.request(
             method,
             path,
@@ -29,9 +36,9 @@ open class MRKRequestBase {
             headers: headers)
     }
     
-    public func rxResponse()->Observable<(HTTPURLResponse, Data)> {
+    open func rxResponse()->Observable<(HTTPURLResponse, Any)> {
         return rxRequest().flatMap{
-            $0.rx.responseData()
+            $0.rx.responseJSON()
         }
     }
 }

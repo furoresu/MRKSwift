@@ -7,10 +7,10 @@
 //
 
 import Foundation
+import Alamofire
 
 open class MRKRequestGET : MRKRequestBase {
-    public override init() {
-        super.init()
-        method = .get
+    public init( _ path : String, params : [String:Any] = [:], headers: HTTPHeaders = [:] ){
+        super.init(path, method: .get, params: params, headers: headers)
     }
 }
