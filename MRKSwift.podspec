@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
 	s.source       = { :git => "https://github.com/mrktrace/MRKSwift.git", :tag => "0.0.1" }
 
 	# ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-	s.dependency 'ObjectMapper' , '3.3.0'
+	#s.dependency 'ObjectMapper' , '3.3.0'
 
 
 	# ――― Sub specs ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
