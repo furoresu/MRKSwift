@@ -35,15 +35,15 @@ Pod::Spec.new do |s|
 		mvvm.dependency 'RxSwift' , '4.4.0'
 		mvvm.dependency 'RxCocoa' , '4.4.0'
 		mvvm.source_files  = 	"MRKSwift/src/ui/viewModel/MRKGenericViewControllerViewModel.swift",
-								"MRKSwift/src/core/network/**/*.swift"
+					"MRKSwift/src/core/extension/Rx/Rx+UIViewController.swift"
+								
 	end
 
 	s.subspec 'Network' do |net|
 		net.dependency 'RxSwift'
 		net.dependency 'Alamofire'
 		net.dependency 'RxAlamofire'
-		net.source_files  = 	"MRKSwift/src/ui/viewModel/MRKGenericViewControllerViewModel.swift",
-								"MRKSwift/src/core/extension/Rx/Rx+UIViewController.swift"
+		net.source_files  = "MRKSwift/src/core/network/**/*.swift"
 	end
 
 	s.subspec 'Navigation' do |nav|
