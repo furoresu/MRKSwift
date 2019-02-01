@@ -39,9 +39,9 @@ Pod::Spec.new do |s|
 	end
 
 	s.subspec 'Network' do |net|
-		net.dependency 'RxSwift' , '4.4.0'
-		net.dependency 'Alamofire' , '4.7.3'
-		net.dependency 'RxAlamofire' , '4.2.0'
+		net.dependency 'RxSwift'
+		net.dependency 'Alamofire'
+		net.dependency 'RxAlamofire'
 		net.source_files  = 	"MRKSwift/src/ui/viewModel/MRKGenericViewControllerViewModel.swift",
 								"MRKSwift/src/core/extension/Rx/Rx+UIViewController.swift"
 	end
