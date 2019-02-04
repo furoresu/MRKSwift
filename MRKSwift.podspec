@@ -42,8 +42,10 @@ Pod::Spec.new do |s|
 	s.subspec 'Network' do |net|
 		net.dependency 'RxSwift'
 		net.dependency 'Alamofire'
+		net.dependency 'ObjectMapper'
 		net.dependency 'RxAlamofire'
-		net.source_files  = "MRKSwift/src/core/network/**/*.swift"
+		net.source_files  = "MRKSwift/src/core/network/**/*.swift",
+					"MRKSwift/src/core/extension/Rx/Rx+Mappable.swift"
 	end
 
 	s.subspec 'Navigation' do |nav|
