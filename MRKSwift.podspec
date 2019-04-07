@@ -19,8 +19,8 @@ Pod::Spec.new do |s|
 	s.social_media_url   = "http://twitter.com/OfficiaMRKTrace"
 
 	# ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-	s.platform     = :ios, "9.0"
-	s.swift_version = "3.2"
+	s.platform     = :ios, "11.0"
+	s.swift_version = "4.0"
 
 	# ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 	s.source       = { :git => "https://github.com/mrktrace/MRKSwift.git", :tag => "0.0.1" }
